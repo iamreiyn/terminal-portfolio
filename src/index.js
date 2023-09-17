@@ -6,9 +6,9 @@ import App from './App';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-    <BrowserRouter>
+  <BrowserRouter basename={window.location.pathname || ''}>
       <Routes>
-        <Route path="/" element={<App />} />
+      <Route exact path="/" element={<App />} />
       </Routes>
     </BrowserRouter>
 );
