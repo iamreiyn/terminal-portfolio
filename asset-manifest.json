@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/mterminal-portfolio/static/css/main.3e045add.css",
+    "main.js": "/mterminal-portfolio/static/js/main.c6eff3da.js",
+    "index.html": "/mterminal-portfolio/index.html",
+    "main.3e045add.css.map": "/mterminal-portfolio/static/css/main.3e045add.css.map",
+    "main.c6eff3da.js.map": "/mterminal-portfolio/static/js/main.c6eff3da.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3e045add.css",
+    "static/js/main.c6eff3da.js"
+  ]
+}
