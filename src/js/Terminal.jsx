@@ -99,6 +99,9 @@ function Terminal() {
           else if (CommandArea.value === "mysite") {
             window.open("https://renisal.me", '_blank');
           }
+          else if (CommandArea.value === "source") {
+            window.open("https://github.com/montymahato/mterminal-portfolio", '_blank');
+          }
           CommandArea.value = "";
         }
       }
@@ -138,7 +141,7 @@ function Terminal() {
         <br />
         {Text3.includes("Access") ? <span>Welcome! this project is currently under development.</span> : ""}
         {Text3.includes("Access") ? <span>My other projects and handles: <a href="https://renisal.me">https://renisal.me</a></span> : ""}
-        {Text3.includes("Access") ? <span><span style={{ color: "skyblue" }}>Available commands:</span> about, projects, github, discord, mysite</span> : ""}
+        {Text3.includes("Access") ? <span><span style={{ color: "skyblue" }}>Available commands:</span> about, projects, github, discord, mysite, source</span> : ""}
         <br></br>
         {Text3.includes("Access") ? <span>Thank you for visiting!◝(ᵔᵕᵔ)◜</span> : ""}
         <br></br>
@@ -169,6 +172,9 @@ function Terminal() {
             }
             else if (item.includes('mysite')) {
               return <li key={index}>{item}<br></br><br></br><span style={{color: "#c9c9c9"}}>Opened my personal website in a new tab: https://renisal.me</span><br></br><br></br></li>;
+            }
+            else if (item.includes('source')) {
+              return <li key={index}>{item}<br></br><br></br><span style={{color: "#c9c9c9"}}>Opened the source code of this site in a new tab: https://github.com/montymahato/mterminal-portfolio</span><br></br><br></br></li>;
             }
             else if (item.includes('about')) {
               return <div><li key={index}>{item}</li>
