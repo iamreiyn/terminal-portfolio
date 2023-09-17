@@ -1,0 +1,9 @@
+@import "https://fonts.googleapis.com/css?family=Inter";
+
+body {
+  margin: 0px;
+  font-family: -apple-system, BlinkMacSystemFont, Inter, sans-serif, Arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+}
