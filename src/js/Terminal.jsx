@@ -186,7 +186,8 @@ function Terminal() {
                 </div>
               </div>
             } else {
-              return <li key={index}>{item}</li>;
+              return <div><li key={index}>{item}</li>
+              bash: {item.replace("guest@renisal.me:~$", '')}: command not found</div>;
             }
           })}
         </ul>
