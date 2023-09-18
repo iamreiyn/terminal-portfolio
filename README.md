@@ -1,5 +1,5 @@
 # mTerminal Portfolio v1
-![Screenshot](https://i.imgur.com/JXAZtDr.png)
+![Screenshot](https://i.imgur.com/D5CqzMO.png)
 
 ## Description
 This is a simple portfolio website created using React. It mimics a command-line terminal, but is also interactive.
