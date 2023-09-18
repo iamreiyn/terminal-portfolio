@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import '../css/terminal.css';
+import HackerSimulator from './HackSimulator';
 
 const Typewriter = (text, delay, func, Spinner, spinTime) => {
 
@@ -141,19 +142,19 @@ function Terminal() {
         <br />
         {Text3.includes("Access") ? <span>Welcome! this project is currently under development.</span> : ""}
         {Text3.includes("Access") ? <span>My other projects and handles: <a href="https://renisal.me">https://renisal.me</a></span> : ""}
-        {Text3.includes("Access") ? <span><span style={{ color: "skyblue" }}>Available commands:</span> about, projects, github, discord, mysite, source</span> : ""}
+        {Text3.includes("Access") ? <span><span style={{ color: "skyblue" }}>Available commands:</span> about, projects, github, discord, mysite, source, hacksim, clear</span> : ""}
         <br></br>
         {Text3.includes("Access") ? <span>Thank you for visiting!◝(ᵔᵕᵔ)◜</span> : ""}
         <br></br>
-        <ul className='previousCommands'>
+        <ul className='previousCommands' id='console23'>
           {prevusedCommand.map((item, index) => {
-            if (item.includes('discord')) {
+            if (item.match(new RegExp(`\\b${"discord"}\\b`, 'g'))) {
               return <li key={index}>{item}<br></br><br></br>My discord: <span style={{color: "rgb(68, 110, 250)"}}>@renisal</span><br></br><br></br></li>;
             }
-            else if (item.includes('github')) {
+            else if (item.match(new RegExp(`\\b${"github"}\\b`, 'g'))) {
               return <li key={index}>{item}<br></br><br></br><span style={{color: "#c9c9c9"}}>Opened my GitHub profile in a new tab: https://github.com/montymahato</span><br></br><br></br></li>;
             }
-            else if (item.includes('projects')) {
+            else if (item.match(new RegExp(`\\b${"projects"}\\b`, 'g'))) {
               return <div><li key={index}>{item}</li>
                 <br></br>  <label for="mcq">Select another project to view:</label>
                 <div class="mcq-wrapper"><br></br>
@@ -170,13 +171,24 @@ function Terminal() {
                 </div>
               </div>
             }
-            else if (item.includes('mysite')) {
+            else if (item.match(new RegExp(`\\b${"mysite"}\\b`, 'g'))) {
               return <li key={index}>{item}<br></br><br></br><span style={{color: "#c9c9c9"}}>Opened my personal website in a new tab: https://renisal.me</span><br></br><br></br></li>;
             }
-            else if (item.includes('source')) {
+            else if (item.match(new RegExp(`\\b${"source"}\\b`, 'g'))) {
               return <li key={index}>{item}<br></br><br></br><span style={{color: "#c9c9c9"}}>Opened the source code of this site in a new tab: https://github.com/montymahato/mterminal-portfolio</span><br></br><br></br></li>;
             }
-            else if (item.includes('about')) {
+            else if (item.match(new RegExp(`\\b${"hacksim"}\\b`, 'g'))) {
+              return <div><HackerSimulator></HackerSimulator><br></br>
+               To abort, use aborthack
+              </div>}
+             else if (item.match(new RegExp(`\\b${"aborthack"}\\b`, 'g'))) {
+              return <div><li key={index}>{item}</li>
+              bash: {item.replace("guest@renisal.me:~$", '')}: ERROR - Script terminated by the user</div>;
+             }
+             else if (item.match(new RegExp(`\\b${"clear"}\\b`, 'g'))) {
+              return setprevusedCommand([]);
+            }
+            else if (item.match(new RegExp(`\\b${"about"}\\b`, 'g'))) {
               return <div><li key={index}>{item}</li>
                 <div className='aboutme'><br></br>
                   Hi, nice to meet you. I'm Monty, a 19 years old CS student from India.
