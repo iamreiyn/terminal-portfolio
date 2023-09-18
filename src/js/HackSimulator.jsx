@@ -116,7 +116,7 @@ const HackerSimulator = () => {
     const intervalId = setInterval(() => {
       const newText = generateRandomText();
       setDisplayText((prevText) => `${prevText} ${newText}`);
-    }, 400);
+    }, 100);
 
     return () => clearInterval(intervalId);
   }, []);
