@@ -1,4 +1,4 @@
-# mTerminal Portfolio v1
+# Terminal Portfolio v1
 ![Screenshot](https://i.imgur.com/D5CqzMO.png)
 
 ## Description
@@ -8,14 +8,14 @@ Responsive Design: The portfolio is fully responsive and looks great on desktop 
 Interactive Terminal: Users can interact with the portfolio by typing commands just like in an actual terminal.<br>
 Customizable Content: You can easily customize the portfolio, add your projects, skills, and hyperlinks, and add or modify commands.
 
-#### Check the live website: https://renisal.me/mterminal-portfolio
+#### Check the live website: https://renisal.me/terminal-portfolio
 
 ## Usage
 Clone this repository to your local machine:<br>
-`git clone https://github.com/montymahato/mterminal-portfolio.git`<br>
+`git clone https://github.com/montymahato/terminal-portfolio.git`<br>
 
 Navigate to the project directory:<br>
-`cd mterminal-portfolio`<br>
+`cd terminal-portfolio`<br>
 
 Install the dependencies:<br>
 `npm install`<br>

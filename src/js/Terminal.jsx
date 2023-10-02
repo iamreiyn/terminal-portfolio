@@ -103,7 +103,7 @@ function Terminal() {
             window.open("https://renisal.me", '_blank');
           }
           else if (CommandArea.value === "source") {
-            window.open("https://github.com/montymahato/mterminal-portfolio", '_blank');
+            window.open("https://github.com/montymahato/terminal-portfolio", '_blank');
           }
           CommandArea.value = "";
         }
@@ -194,7 +194,7 @@ function Terminal() {
               return <li key={index}>{item}<br></br><br></br><span style={{ color: "#c9c9c9" }}>Opened my personal website in a new tab: https://renisal.me</span><br></br><br></br></li>;
             }
             else if (item.match(new RegExp(`\\b${"source"}\\b`, 'g'))) {
-              return <li key={index}>{item}<br></br><br></br><span style={{ color: "#c9c9c9" }}>Opened the source code of this site in a new tab: https://github.com/montymahato/mterminal-portfolio</span><br></br><br></br></li>;
+              return <li key={index}>{item}<br></br><br></br><span style={{ color: "#c9c9c9" }}>Opened the source code of this site in a new tab: https://github.com/montymahato/terminal-portfolio</span><br></br><br></br></li>;
             }
             else if (item.match(new RegExp(`\\b${"hacksim"}\\b`, 'g'))) {
               return <div><HackerSimulator></HackerSimulator><br></br>
