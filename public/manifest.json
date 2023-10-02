@@ -1,6 +1,6 @@
 {
-  "short_name": "renisal.tech",
-  "name": "Monty Mahato A.K.A Renisal's portfolio",
+  "short_name": "Terminal Portfolio",
+  "name": "An interactive terminal-style portfolio built with React.",
   "icons": [
     {
       "src": "favicon.ico",
