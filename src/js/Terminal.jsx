@@ -71,7 +71,7 @@ function Terminal() {
     while (id--) {
       clearInterval(id);
     }
-    setText1("ssh guest@renisal.me")
+    setText1("ssh guest@reiynstudio.ink")
     setText3("Access Granted!")
   }
 
@@ -88,22 +88,22 @@ function Terminal() {
           while (id--) {
             clearInterval(id);
           }
-          setText1("ssh guest@renisal.me")
-          setText2("guest@renisal.me's password:");
+          setText1("ssh guest@reiynstudio.ink")
+          setText2("guest@reiynstudio.ink's password:");
           setText3("Access Granted!")
         }
         const CommandArea = document.getElementById("command");
         if (CommandArea) {
           previousCommand = CommandArea.value
-          setprevusedCommand(prevArray => [...prevArray, "guest@renisal.me:~$ " + previousCommand])
+          setprevusedCommand(prevArray => [...prevArray, "guest@reiynstudio.ink:~$ " + previousCommand])
           if (CommandArea.value === "github") {
-            window.open("https://github.com/montymahato", '_blank');
+            window.open("https://github.com/reiyncode", '_blank');
           }
           else if (CommandArea.value === "mysite") {
-            window.open("https://renisal.me", '_blank');
+            window.open("https://reiynstudio.ink", '_blank');
           }
           else if (CommandArea.value === "source") {
-            window.open("https://github.com/montymahato/terminal-portfolio", '_blank');
+            window.open("https://github.com/reiyncode/terminal-portfolio", '_blank');
           }
           CommandArea.value = "";
         }
@@ -111,10 +111,10 @@ function Terminal() {
 
     });
 
-    Typewriter("ssh guest@renisal.me", 100, setText1)
+    Typewriter("ssh guest@reiynstudio.ink", 100, setText1)
 
     setTimeout(() => {
-      setText2("guest@renisal.me's password:▮");
+      setText2("guest@reiynstudio.ink's password:▮");
     }, 3000);
 
     setTimeout(() => {
@@ -122,11 +122,11 @@ function Terminal() {
     }, 4300);
 
     setTimeout(() => {
-      setText3("Connecting to guest@renisal.me...");
+      setText3("Connecting to guest@reiynstudio.ink...");
     }, 4300);
 
     setTimeout(() => {
-      setText2("guest@renisal.me's password:");
+      setText2("guest@reiynstudio.ink's password:");
       setText3("> Access granted.");
     }, 7300);
 
@@ -156,10 +156,9 @@ function Terminal() {
   </pre>
 ) : null}
 
-        {Text3.includes("Access") ? <span>Welcome! this project is currently under development.</span> : ""}
-        {Text3.includes("Access") ? <span>What is this? It's a terminal simulation, initially created it as a portfolio <a href="https://renisal.me">(https://renisal.me)</a></span> : ""}<br />
+        {Text3.includes("Access") ? <span>What is this? It's a terminal simulation portfolio template. <a href="https://reiynstudio.ink">(https://reiynstudio.ink)</a></span> : ""}<br />
         {Text3.includes("Access") ? <span><span style={{ color: "skyblue" }}>Available Commands:</span></span> : ""}
-        {Text3.includes("Access") ? <span><span style={{ color: "#c9c9c9" }}>General: </span> about, discord, play, projects, hacksim, clear</span> : ""}
+        {Text3.includes("Access") ? <span><span style={{ color: "#c9c9c9" }}>General: </span> about, discord, radio, projects, hacksim, clear</span> : ""}
         {Text3.includes("Access") ? <span><span style={{ color: "#c9c9c9" }}>Links:</span> github, mysite, source</span> : ""}
 
         <br></br>
@@ -168,33 +167,30 @@ function Terminal() {
         <ul className='previousCommands' id='console23'>
           {prevusedCommand.map((item, index) => {
             if (item.match(new RegExp(`\\b${"discord"}\\b`, 'g'))) {
-              return <li key={index}>{item}<br></br><br></br>My discord: <span style={{ color: "rgb(68, 110, 250)" }}>@renisal</span><br></br><br></br></li>;
+              return <li key={index}>{item}<br></br><br></br>My discord: <span style={{ color: "rgb(68, 110, 250)" }}>@iamreiyn</span><br></br><br></br></li>;
             }
             else if (item.match(new RegExp(`\\b${"github"}\\b`, 'g'))) {
-              return <li key={index}>{item}<br></br><br></br><span style={{ color: "#c9c9c9" }}>Opened my GitHub profile in a new tab: https://github.com/montymahato</span><br></br><br></br></li>;
+              return <li key={index}>{item}<br></br><br></br><span style={{ color: "#c9c9c9" }}>Opened my GitHub profile in a new tab: https://github.com/reiyncode</span><br></br><br></br></li>;
             }
             else if (item.match(new RegExp(`\\b${"projects"}\\b`, 'g'))) {
               return <div><li key={index}>{item}</li>
                 <br></br>  <label for="mcq">Select another project to view:</label>
                 <div class="mcq-wrapper"><br></br>
                   <ul id="mcq" class="mcq">
-                    <li class="mcq-option" tabindex="0" data-value="regex"><a href="https://montymahato.github.io/regex-validator" target='_blank' rel="noreferrer">RegEx Validator ↗</a></li>
-                    <li class="mcq-option" tabindex="1" data-value="luap"><a href="https://montymahato.github.io/lua-pattern-tester" target='_blank' rel="noreferrer">Lua Pattern Tester ↗</a></li>
-                    <li class="mcq-option" tabindex="2" data-value="apple"><a href="https://montymahato.github.io/apple-website-clone" target='_blank' rel="noreferrer">Apple Website Clone ↗</a></li>
-                    <li class="mcq-option" tabindex="3" data-value="crypto"><a href="https://montymahato.github.io/cryptodata-retriever" target='_blank' rel="noreferrer">Cryptodata Retriever ↗</a></li>
-                    <li class="mcq-option" tabindex="4" data-value="sampserver"><a href="https://github.com/montymahato/samp-mumbai-rp" target='_blank' rel="noreferrer">SA-MP RP Server Script ↗</a></li>
-                    <li class="mcq-option" tabindex="5" data-value="passgen"><a href="https://montymahato.github.io/password-generator" target='_blank' rel="noreferrer">Password Generator ↗</a></li>
-                    <li class="mcq-option" tabindex="6" data-value="uif"><a href="https://github.com/montymahato/uif-discord-plugin" target='_blank' rel="noreferrer">UIF Discord Rich Presence ↗</a></li>
-                    <li class="mcq-option" tabindex="7" data-value="discordbot"><a href="https://github.com/montymahato/purposebot" target='_blank' rel="noreferrer">Discord Bot ↗</a></li><br></br>
+                    <li class="mcq-option" tabindex="0" data-value="regex"><a href="https://reiyncode.github.io/regex-validator" target='_blank' rel="noreferrer">RegEx Validator ↗</a></li>
+                    <li class="mcq-option" tabindex="1" data-value="luap"><a href="https://reiyncode.github.io/lua-pattern-tester" target='_blank' rel="noreferrer">Lua Pattern Tester ↗</a></li>
+                    <li class="mcq-option" tabindex="2" data-value="apple"><a href="https://reiyncode.github.io/apple-website-clone" target='_blank' rel="noreferrer">Apple Website Clone ↗</a></li>
+                    <li class="mcq-option" tabindex="4" data-value="sampserver"><a href="https://github.com/reiyncode/samp-mumbai-rp" target='_blank' rel="noreferrer">SA-MP RP Server Script ↗</a></li>
+                    <li class="mcq-option" tabindex="5" data-value="passgen"><a href="https://reiyncode.github.io/password-generator" target='_blank' rel="noreferrer">Password Generator ↗</a></li>
                   </ul>
                 </div>
               </div>
             }
             else if (item.match(new RegExp(`\\b${"mysite"}\\b`, 'g'))) {
-              return <li key={index}>{item}<br></br><br></br><span style={{ color: "#c9c9c9" }}>Opened my personal website in a new tab: https://renisal.me</span><br></br><br></br></li>;
+              return <li key={index}>{item}<br></br><br></br><span style={{ color: "#c9c9c9" }}>Opened my personal website in a new tab: https://reiynstudio.ink</span><br></br><br></br></li>;
             }
             else if (item.match(new RegExp(`\\b${"source"}\\b`, 'g'))) {
-              return <li key={index}>{item}<br></br><br></br><span style={{ color: "#c9c9c9" }}>Opened the source code of this site in a new tab: https://github.com/montymahato/terminal-portfolio</span><br></br><br></br></li>;
+              return <li key={index}>{item}<br></br><br></br><span style={{ color: "#c9c9c9" }}>Opened the source code of this site in a new tab: https://github.com/reiyncode/terminal-portfolio</span><br></br><br></br></li>;
             }
             else if (item.match(new RegExp(`\\b${"hacksim"}\\b`, 'g'))) {
               return <div><HackerSimulator></HackerSimulator><br></br>
@@ -203,23 +199,23 @@ function Terminal() {
             }
             else if (item.match(new RegExp(`\\b${"aborthack"}\\b`, 'g'))) {
               return <div><li key={index}>{item}</li>
-                bash: {item.replace("guest@renisal.me:~$", '')}: ERROR - Script terminated by the user</div>;
+                bash: {item.replace("guest@reiynstudio.ink:~$", '')}: ERROR - Script terminated by the user</div>;
             }
-            else if (item.match(new RegExp(`\\b${"play"}\\b`, 'g'))) {
-              if (item.match(new RegExp(`\\b${"play shutdown"}\\b`, 'g')) || item.match(new RegExp(`\\b${"play 1"}\\b`, 'g'))) {
-                return <div><span style={{color: "hotpink"}}>Now playing:</span> BLACKPINK - ‘Shut Down’ M/V
-                  <YouTube link={"https://www.youtube.com/embed/POe9SOEKotk?autoplay=1"} /></div>
+            else if (item.match(new RegExp(`\\b${"radio"}\\b`, 'g'))) {
+              if (item.match(new RegExp(`\\b${"play starboy"}\\b`, 'g')) || item.match(new RegExp(`\\b${"radio 1"}\\b`, 'g'))) {
+                return <div><span style={{color: "hotpink"}}>Now playing:</span> The Weeknd - ‘Starboy’ M/V
+                  <YouTube link={"https://www.youtube.com/embed/34Na4j8AVgA?autoplay=1"} /></div>
               }
-              else if (item.match(new RegExp(`\\b${"play flower"}\\b`, 'g')) || item.match(new RegExp(`\\b${"play 2"}\\b`, 'g'))) {
-                return <div><span style={{color: "hotpink"}}>Now playing:</span> JISOO - ‘꽃(FLOWER)’ M/V
-                  <YouTube link={"https://www.youtube.com/embed/YudHcBIxlYw?autoplay=1"} /></div>
+              else if (item.match(new RegExp(`\\b${"radio espresso"}\\b`, 'g')) || item.match(new RegExp(`\\b${"radio 2"}\\b`, 'g'))) {
+                return <div><span style={{color: "hotpink"}}>Now playing:</span> Sabrina Carpenter - ‘Espresso’ M/V
+                  <YouTube link={"https://www.youtube.com/embed/eVli-tstM5E?autoplay=1"} /></div>
               }
               else {
                 return <div><li key={index}>{item}</li><br></br>
                   <span style={{color: "hotpink"}}>Available music:</span><br></br>
-                  1. shutdown (by BLACKPINK)<br></br>
-                  2. flower (by JISOO)<br></br>
-                  To play a song, use <strong>play number/songname</strong> (e.g. play 1 or play shutdown)<br></br><br></br></div>
+                  1. starboy (by The Weeknd)<br></br>
+                  2. espresso (by Sabrina Carpenter)<br></br>
+                  To play a song, use <strong>radio number/songname</strong> (e.g. radio 1 or radio starboy)<br></br><br></br></div>
               }
             }
             else if (item.match(new RegExp(`\\b${"clear"}\\b`, 'g'))) {
@@ -228,7 +224,7 @@ function Terminal() {
             else if (item.match(new RegExp(`\\b${"about"}\\b`, 'g'))) {
               return <div><li key={index}>{item}</li>
                 <div className='aboutme'><br></br>
-                  Hi, nice to meet you. I'm Monty, a 19 years old CS student from India. I'm a casual programmer (doing it just for fun)
+                  Hi. I'm Reiyn, nice to meet you. 
                   <br></br><br></br>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget nisl a ligula tristique consequat. Nullam non efficitur mi. Sed nec dapibus elit. Quisque luctus, nunc et volutpat tristique, odio elit vestibulum odio, id eleifend lectus justo non dolor. Praesent vel libero id arcu bibendum bibendum
                   <br></br><br></br>
@@ -236,11 +232,11 @@ function Terminal() {
               </div>
             } else {
               return <div><li key={index}>{item}</li>
-                bash: {item.replace("guest@renisal.me:~$", '')}: command not found</div>;
+                bash: {item.replace("guest@reiynstudio.ink:~$", '')}: command not found</div>;
             }
           })}
         </ul>
-        {Text3.includes("Access") ? <span className='commands'><span className='userPrefix'>guest@renisal.me:~$</span> <input type="text" id="command" name="command" autoFocus></input></span> : ""}
+        {Text3.includes("Access") ? <span className='commands'><span className='userPrefix'>guest@reiynstudio.ink:~$</span> <input type="text" id="command" name="command" autoFocus></input></span> : ""}
       </div>
     </div>
   );
