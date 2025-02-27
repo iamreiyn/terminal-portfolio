@@ -97,13 +97,13 @@ function Terminal() {
           previousCommand = CommandArea.value
           setprevusedCommand(prevArray => [...prevArray, "guest@reiynstudio.ink:~$ " + previousCommand])
           if (CommandArea.value === "github") {
-            window.open("https://github.com/reiyncode", '_blank');
+            window.open("https://github.com/iamreiyn", '_blank');
           }
           else if (CommandArea.value === "mysite") {
             window.open("https://reiynstudio.ink", '_blank');
           }
           else if (CommandArea.value === "source") {
-            window.open("https://github.com/reiyncode/terminal-portfolio", '_blank');
+            window.open("https://github.com/iamreiyn/terminal-portfolio", '_blank');
           }
           CommandArea.value = "";
         }
@@ -170,18 +170,18 @@ function Terminal() {
               return <li key={index}>{item}<br></br><br></br>My discord: <span style={{ color: "rgb(68, 110, 250)" }}>@iamreiyn</span><br></br><br></br></li>;
             }
             else if (item.match(new RegExp(`\\b${"github"}\\b`, 'g'))) {
-              return <li key={index}>{item}<br></br><br></br><span style={{ color: "#c9c9c9" }}>Opened my GitHub profile in a new tab: https://github.com/reiyncode</span><br></br><br></br></li>;
+              return <li key={index}>{item}<br></br><br></br><span style={{ color: "#c9c9c9" }}>Opened my GitHub profile in a new tab: https://github.com/iamreiyn</span><br></br><br></br></li>;
             }
             else if (item.match(new RegExp(`\\b${"projects"}\\b`, 'g'))) {
               return <div><li key={index}>{item}</li>
                 <br></br>  <label for="mcq">Select another project to view:</label>
                 <div class="mcq-wrapper"><br></br>
                   <ul id="mcq" class="mcq">
-                    <li class="mcq-option" tabindex="0" data-value="regex"><a href="https://reiyncode.github.io/regex-validator" target='_blank' rel="noreferrer">RegEx Validator ↗</a></li>
-                    <li class="mcq-option" tabindex="1" data-value="luap"><a href="https://reiyncode.github.io/lua-pattern-tester" target='_blank' rel="noreferrer">Lua Pattern Tester ↗</a></li>
-                    <li class="mcq-option" tabindex="2" data-value="apple"><a href="https://reiyncode.github.io/apple-website-clone" target='_blank' rel="noreferrer">Apple Website Clone ↗</a></li>
-                    <li class="mcq-option" tabindex="4" data-value="sampserver"><a href="https://github.com/reiyncode/samp-mumbai-rp" target='_blank' rel="noreferrer">SA-MP RP Server Script ↗</a></li>
-                    <li class="mcq-option" tabindex="5" data-value="passgen"><a href="https://reiyncode.github.io/password-generator" target='_blank' rel="noreferrer">Password Generator ↗</a></li>
+                    <li class="mcq-option" tabindex="0" data-value="regex"><a href="https://iamreiyn.github.io/regex-validator" target='_blank' rel="noreferrer">RegEx Validator ↗</a></li>
+                    <li class="mcq-option" tabindex="1" data-value="luap"><a href="https://iamreiyn.github.io/lua-pattern-tester" target='_blank' rel="noreferrer">Lua Pattern Tester ↗</a></li>
+                    <li class="mcq-option" tabindex="2" data-value="apple"><a href="https://iamreiyn.github.io/apple-website-clone" target='_blank' rel="noreferrer">Apple Website Clone ↗</a></li>
+                    <li class="mcq-option" tabindex="4" data-value="sampserver"><a href="https://github.com/iamreiyn/samp-mumbai-rp" target='_blank' rel="noreferrer">SA-MP RP Server Script ↗</a></li>
+                    <li class="mcq-option" tabindex="5" data-value="passgen"><a href="https://iamreiyn.github.io/password-generator" target='_blank' rel="noreferrer">Password Generator ↗</a></li>
                   </ul>
                 </div>
               </div>
@@ -190,7 +190,7 @@ function Terminal() {
               return <li key={index}>{item}<br></br><br></br><span style={{ color: "#c9c9c9" }}>Opened my personal website in a new tab: https://reiynstudio.ink</span><br></br><br></br></li>;
             }
             else if (item.match(new RegExp(`\\b${"source"}\\b`, 'g'))) {
-              return <li key={index}>{item}<br></br><br></br><span style={{ color: "#c9c9c9" }}>Opened the source code of this site in a new tab: https://github.com/reiyncode/terminal-portfolio</span><br></br><br></br></li>;
+              return <li key={index}>{item}<br></br><br></br><span style={{ color: "#c9c9c9" }}>Opened the source code of this site in a new tab: https://github.com/iamreiyn/terminal-portfolio</span><br></br><br></br></li>;
             }
             else if (item.match(new RegExp(`\\b${"hacksim"}\\b`, 'g'))) {
               return <div><HackerSimulator></HackerSimulator><br></br>
